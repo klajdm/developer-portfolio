@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .contactInput {
+    @apply outline-none w-full lg:w-72 justify-start rounded-xl border px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all bg-neutral-100;
+  }
+}
+@layer components {
+  .project-btn {
+    @apply flex items-center justify-center space-x-1 px-5 py-2 rounded-full bg-[#86906F] hover:bg-[#90a06a] text-sm md:text-base text-white;
+  }
+}
+
+.custom-h1 {
+  display: block;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  letter-spacing: 3px;
+  text-align: center;
+  position: relative;
+  color: #111;
+}
+
+.custom-h1:before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  height: 5px;
+  width: 4rem;
+  background: #86906f;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.item-btn {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+.ico {
+  padding-right: 10px;
+  font-size: 30px;
+}
+
+.item-btn:hover {
+  background-color: #86906f;
+  color: #fff;
+  transition: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.block {
+  position: relative;
+  margin: 10px auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.block:before,
+.block:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background-image: conic-gradient(#90a06a 20deg, transparent 200deg);
+  background-size: 100%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 100%;
+  z-index: -1;
+  animation: steam 2s linear infinite;
+}
+
+@keyframes steam {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.block:hover {
+  background: #90a06a;
+  color: #fff;
+  scale: 1.1;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.block:hover:before,
+.block:hover:after {
+  /* Remove the animation on hover */
+  background-image: none;
+}
