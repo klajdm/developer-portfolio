@@ -1,19 +1,19 @@
-import Layout from "@/components/Layout/Layout";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import { sanityClient } from "@/sanity.config";
 
-export default function Home() {
+export default function Home({ skills, bio }) {
   return (
     <>
       {/* Hero */}
       <section id="hero" className="relative">
-        <Hero />
+        <Hero bio={bio} />
       </section>
 
       {/* About */}
       <section id="about" className="relative ">
-        <About />
+        <About skills={skills} />
       </section>
 
       {/* Contact */}
@@ -22,4 +22,28 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+export async function getStaticProps() {
+  try {
+    const client = sanityClient;
+    // Fetch data for skills, bio, and projects using the Sanity client
+    const skills = await client.fetch(`*[_type=='skill'] | order(_createdAt)`);
+    const bio = await client.fetch(`*[_type=='bio']`);
+    return {
+      props: {
+        skills,
+        bio,
+      },
+    };
+  } catch (error) {
+    // Handle any errors that may occur during data fetching
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        skills: [], // Return empty arrays or default values for each property if there's an error
+        bio: {},
+      },
+    };
+  }
 }
