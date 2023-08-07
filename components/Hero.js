@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { urlFor } from "@/sanity.config";
+import { urlFor } from "@/config/sanity.config";
 import Typewriter from "typewriter-effect";
 
 export default function Hero({ bio }) {

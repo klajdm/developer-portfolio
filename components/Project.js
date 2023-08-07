@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { TbSourceCode } from "react-icons/tb";
 import { CgWebsite } from "react-icons/cg";
-import { urlFor } from "@/sanity.config";
+import { urlFor } from "@/config/sanity.config";
 
 export default function Project({ projects }) {
   return (

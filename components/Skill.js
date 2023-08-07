@@ -1,5 +1,5 @@
 import React from "react";
-import { urlFor } from "@/sanity.config";
+import { urlFor } from "@/config/sanity.config";
 
 export default function Skill({ skill }) {
   return (

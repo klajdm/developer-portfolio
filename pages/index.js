@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import { sanityClient } from "@/sanity.config";
+import { sanityClient } from "@/config/sanity.config";
 
 export default function Home({ skills, bio }) {
   return (

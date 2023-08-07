@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import Project from "@/components/Project";
-import { sanityClient } from "@/sanity.config";
+import { sanityClient } from "@/config/sanity.config";
 import React from "react";
 
 export default function Projects({ projects }) {
