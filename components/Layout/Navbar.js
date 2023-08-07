@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
           <div className="lg:hidden cursor-pointer">
             <Menu as="div" className="relative">
-              <Menu.Button className="flex items-center border px-2 py-2 rounded-md hover:bg-neutral-200 transition-all duration-300">
+              <Menu.Button className="flex items-center border px-2 py-2 rounded-md hover:bg-neutral-200 transition-all duration-300 dark:hover:bg-zinc-600 dark:border-zinc-600">
                 <FiMenu size={18} />
               </Menu.Button>
               <Transition
