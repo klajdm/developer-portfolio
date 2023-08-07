@@ -6,28 +6,28 @@ export default function ContactItems() {
   return (
     <div>
       <div className="relative flex flex-col space-y-4 ">
-        <Link href="https://www.linkedin.com/in/klajdi-murataj-0290a1230">
-          <button className="item-btn">
-            <FaLinkedinIn className="ico" />
+        <Link href="https://www.linkedin.com/in/klajdi-murataj-511617285/">
+          <button className="item-btn dark:hover:bg-[#a1b378]">
+            <FaLinkedinIn className="ico " />
             Klajdi Murataj
           </button>
         </Link>
         <Link href="https://github.com/klajdm">
-          <button className="item-btn">
+          <button className="item-btn dark:hover:bg-[#a1b378]">
             <FaGithub className="ico" />
             klajdm
           </button>
         </Link>
 
         <Link href="https://www.instagram.com/klajdmurataj">
-          <button className="item-btn">
+          <button className="item-btn dark:hover:bg-[#a1b378]">
             <FaInstagram className="ico" />
             @klajdmurataj
           </button>
         </Link>
 
         <Link href="https://twitter.com/klajdmurataj">
-          <button className="item-btn">
+          <button className="item-btn dark:hover:bg-[#a1b378]">
             <FaTwitter className="ico" />
             @klajdmurataj
           </button>

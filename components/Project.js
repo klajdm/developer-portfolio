@@ -1,62 +1,62 @@
-import Image from "next/image";
 import React from "react";
-import Project1 from "../public/projects/lexova1liber.png";
 import Link from "next/link";
 import { TbSourceCode } from "react-icons/tb";
 import { CgWebsite } from "react-icons/cg";
+import { urlFor } from "@/sanity.config";
 
-export default function Project() {
-  const projects = [1, 2, 3];
+export default function Project({ projects }) {
   return (
     <div className="min-h-screen relative flex flex-col justify-center items-center pb-10">
-      <h1 className="relative custom-h1 text-center w-fit  my-10">Projects</h1>
+      <h1 className="relative custom-h1 text-center w-fit  my-10 dark:text-white">
+        Projects
+      </h1>
       <div className="space-y-10 flex flex-col justify-center items-center">
-        {projects.map((project, i) => (
+        {projects?.map((project) => (
           <div
-            key={i}
-            className="md:w-[50%] lg:w-full flex flex-col justify-center items-center lg:flex-row lg:space-x-10 lg:py-[14rem] bg-white rounded-lg p-2 shadow"
+            key={project._id}
+            className="lg:py-[9rem] flex justify-center items-center"
           >
-            <div className="lg:w-[50%] flex items-center ">
-              <Image
-                src={Project1}
-                width={"100%"}
-                height={"100%"}
-                alt="Project Preview Image"
-                className="rounded-lg shadow-md"
-              />
-            </div>
-            <div className="lg:max-w-[50%] space-y-5 mt-5 md:space-y-10">
-              <h3 className="text-center text-2xl font-semibold tracking-wide">
-                Lexova 1 Liber
-              </h3>
-              <p className="text-sm md:text-lg">
-                &nbsp; &nbsp; &nbsp; Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Voluptatibus illum qui consectetur esse
-                assumenda doloremque ex reprehenderit labore ipsa praesentium
-                eveniet molestiae corporis sint corrupti culpa laboriosam, atque
-                quisquam dicta.
-              </p>
-              <ul className="flex flex-wrap space-x-2">
-                <li>Stack:</li>
-                <li>HTML</li>
-                <li>HTML</li>
-                <li>HTML</li>
-                <li>HTML</li>
-                <li>HTML</li>
-              </ul>
-              <div className="flex space-x-10 items-center justify-center">
-                <Link href="#">
-                  <button className="project-btn">
-                    <CgWebsite />
-                    <span>See Live</span>
-                  </button>
+            <div className="md:w-[70%] lg:w-full flex flex-col justify-center items-center lg:flex-row lg:space-x-10 lg:py-[5rem] bg-white/50 dark:bg-zinc-500/50 rounded-lg p-4 lg:p-10 shadow">
+              <div className=" flex items-center ">
+                <Link href={project.linkToDeployment} target="_blank">
+                  <img
+                    src={urlFor(project.image).url()}
+                    width={"100%"}
+                    height={"100%"}
+                    alt="Project Preview Image"
+                    className="rounded-lg hover:scale-105 transition-all duration-300"
+                  />
                 </Link>
-                <Link href="#">
-                  <button className="project-btn">
-                    <TbSourceCode />
-                    <span>Source</span>
-                  </button>
-                </Link>
+              </div>
+              <div className="lg:max-w-[40%] space-y-5 mt-5 md:space-y-10">
+                <h3 className="text-center text-2xl font-semibold tracking-wide">
+                  {project.title}
+                </h3>
+                <p className="text-sm md:text-lg">{project.summary}</p>
+                <p>
+                  <strong>*</strong>
+                  {project.note}
+                </p>
+                <div>
+                  <p>
+                    <span className="font-semibold">Stack: </span>
+                    {project.technologies.join(", ")}
+                  </p>
+                </div>
+                <div className="flex space-x-10 items-center justify-center">
+                  <Link href={project.linkToDeployment} target="_blank">
+                    <button className="project-btn">
+                      <CgWebsite />
+                      <span>See Live</span>
+                    </button>
+                  </Link>
+                  <Link href={project.linkToBuild} target="_blank">
+                    <button className="project-btn">
+                      <TbSourceCode />
+                      <span>Source</span>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

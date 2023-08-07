@@ -9,11 +9,11 @@ export default function Footer() {
   return (
     <footer className="relative">
       <div onClick={scrollToTop} className="block">
-        <div className=" flex justify-center items-center w-[40px] h-[40px] rounded-full">
+        <div className=" flex justify-center items-center w-[40px] h-[40px] rounded-full dark:text-black dark:hover:text-white">
           <HiMiniHome size={20} />
         </div>
       </div>
-      <div className="relative flex w-full justify-center text-xs py-4 bg-white">
+      <div className="relative flex w-full justify-center text-xs py-4 bg-white dark:bg-zinc-700">
         <p>
           © Copyright 2023. Made by{" "}
           <span className="underline font-bold">

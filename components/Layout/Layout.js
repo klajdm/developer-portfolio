@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { ThemeProvider } from "next-themes";
 
 export default function Layout({ children }) {
   const particlesInit = async (main) => {
@@ -151,15 +152,17 @@ export default function Layout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Navbar />
-      <div className="backdrop-blur-[2px]">
-        <main>
-          <div className="relative max-h-full lg:max-w-7xl mx-5 lg:mx-auto mt-16 ">
-            {children}
-          </div>
-        </main>
-        <Footer />
-      </div>
+      <ThemeProvider attribute="class">
+        <Navbar />
+        <div className="backdrop-blur-[2px]">
+          <main>
+            <div className="relative max-h-full lg:max-w-7xl mx-5 lg:mx-auto pt-16 ">
+              {children}
+            </div>
+          </main>
+          <Footer />
+        </div>
+      </ThemeProvider>
     </>
   );
 }
