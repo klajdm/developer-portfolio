@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Skill from "./Skill";
-import { urlFor } from "@/config/sanity.config";
 
 export default function About({ skills }) {
   return (

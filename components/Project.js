@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { TbSourceCode } from "react-icons/tb";
 import { CgWebsite } from "react-icons/cg";
 import { urlFor } from "@/config/sanity.config";
@@ -10,7 +11,21 @@ export default function Project({ projects }) {
       <h1 className="relative custom-h1 text-center w-fit  my-10 dark:text-white">
         Projects
       </h1>
-      <div className="space-y-10 flex flex-col justify-center items-center">
+      <motion.div
+        initial={{
+          y: +150,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 1.2,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{ once: true }}
+        className="space-y-10 flex flex-col justify-center items-center"
+      >
         {projects?.map((project) => (
           <div
             key={project._id}
@@ -32,14 +47,14 @@ export default function Project({ projects }) {
                 <h3 className="text-center text-2xl font-semibold tracking-wide">
                   {project.title}
                 </h3>
-                <p className="text-sm md:text-lg">{project.summary}</p>
-                <p>
+                <p className="md:text-lg">{project.summary}</p>
+                <p className="">
                   <strong>*</strong>
                   {project.note}
                 </p>
                 <div>
                   <p>
-                    <span className="font-semibold">Stack: </span>
+                    <span className="font-semibold">Stack</span>:{" "}
                     {project.technologies.join(", ")}
                   </p>
                 </div>
@@ -61,7 +76,7 @@ export default function Project({ projects }) {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
