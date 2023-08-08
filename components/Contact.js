@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="min-h-screen  relative flex justify-center items-center ">
       <div className="relative flex flex-col space-y-10 lg:space-y-20 mt-16 md:mt-0">
         <div className="relative flex flex-col justify-center items-center space-y-10">
-          <h1 className="custom-h1 mt-10 md:mt-0 dark:text-white">Contact</h1>
+          <h1 className="font-[NunitoMD] custom-h1 mt-10 md:mt-0 dark:text-white">Contact</h1>
           <p className="max-w-xl text-center">
             Feel free to Contact me by submitting the form below and I will get
             back to you as soon as possible

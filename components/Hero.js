@@ -16,7 +16,7 @@ export default function Hero({ bio }) {
           <div className="flex flex-col-reverse md:flex-row md:space-x-10 items-center">
             <div className="space-y-4 ">
               <div className="space-y-4">
-                <h1 className="text-3xl text-center md:text-start lg:text-6xl font-semibold">
+                <h1 className="text-3xl text-center font-[Poppins] md:text-start lg:text-6xl font-semibold">
                   Hi, I&apos;m Klajdi Murataj
                 </h1>
                 <div className="flex justify-center md:justify-start">
@@ -39,7 +39,7 @@ export default function Hero({ bio }) {
               {bio.map((bioInfo) => (
                 <div
                   key={bioInfo._id}
-                  className="lg:max-w-2xl md:max-w-lg text-sm md:text-base"
+                  className="lg:max-w-2xl md:max-w-lg text-base"
                 >
                   <p>{bioInfo.info}</p>
                 </div>

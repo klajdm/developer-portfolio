@@ -8,7 +8,7 @@ import { urlFor } from "@/config/sanity.config";
 export default function Project({ projects }) {
   return (
     <div className="min-h-screen relative flex flex-col justify-center items-center pb-10">
-      <h1 className="relative custom-h1 text-center w-fit  my-10 dark:text-white">
+      <h1 className="relative font-[NunitoMD] custom-h1 text-center w-fit  my-10 dark:text-white">
         Projects
       </h1>
       <motion.div
@@ -17,7 +17,7 @@ export default function Project({ projects }) {
           opacity: 0,
         }}
         transition={{
-          duration: 1.2,
+          duration: 0.8,
         }}
         whileInView={{
           opacity: 1,
@@ -48,7 +48,7 @@ export default function Project({ projects }) {
                   {project.title}
                 </h3>
                 <p className="md:text-lg">{project.summary}</p>
-                <p className="">
+                <p className="text-sm md:text-base">
                   <strong>*</strong>
                   {project.note}
                 </p>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { Fragment } from "react";
-import { FiExternalLink, FiSun, FiMoon, FiMenu } from "react-icons/fi";
+import { FiExternalLink, FiMenu } from "react-icons/fi";
 import { Menu, Transition } from "@headlessui/react";
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 w-full z-[999]">
       <div className=" flex justify-between items-center px-5 lg:px-10 bg-white/80 shadow backdrop-blur-[3px] dark:bg-zinc-800/80">
-        <div className="text-base md:text-2xl font-[Azonix] uppercase">
+        <div className="text-lg md:text-2xl font-[Azonix] uppercase">
           <Link href="/">
             <span>{"<"}</span>Klajdi Murataj <span>{"/>"}</span>
           </Link>
@@ -37,7 +37,7 @@ export default function Navbar() {
               <FiExternalLink size={13} />
             </Link> */}
           </ul>
-          <div>
+          <div className="flex justify-center items-center">
             <ThemeSwitcher />
           </div>
           <div className="lg:hidden cursor-pointer">

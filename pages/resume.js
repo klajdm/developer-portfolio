@@ -9,7 +9,7 @@ export default function Resume() {
   return (
     <>
       <div className="min-h-screen relative flex flex-col items-center md:justify-center ">
-        <h1 className="relative custom-h1 text-center w-fit my-10 dark:text-white">
+        <h1 className="relative custom-h1 font-[NunitoMD] text-center w-fit my-10 dark:text-white">
           Curriculum Vitae
         </h1>
         <div className=" w-[95%] h-[564px] md:w-[85%] md:h-[1064px] lg:w-[720px] relative mb-20">

@@ -7,7 +7,7 @@ export default function About({ skills }) {
     <div className="min-h-screen  relative flex justify-center items-center top-16 mb-16 lg:top-0 lg:mb-0">
       <div className="relative flex flex-col  lg:space-y-36 ">
         <div className=" flex flex-col justify-center items-center space-y-10">
-          <h1 className="custom-h1 mt-10 md:mt-16 dark:text-white">About Me</h1>
+          <h1 className="font-[NunitoMD] custom-h1 mt-10 md:mt-16 dark:text-white">About Me</h1>
           <p className="max-w-xl text-center text-base">
             Here you will find more information about me, what I do, and my
             current skills mostly in terms of programming and technology
@@ -16,25 +16,26 @@ export default function About({ skills }) {
         <div className=" relative flex flex-col lg:flex-row lg:space-x-28 lg:mx-16">
           <div className="md:mx-auto space-y-7 lg:space-y-14 max-w-lg mt-7 lg:mt-0">
             <h4 className="text-xl">Get to know me!</h4>
-            <div className="space-y-3 text-sm md:text-base">
-              <p>
-                I&apos;m a Frontend Web Developer building the Front-end of
-                Websites and Web Applications that leads to the success of the
-                overall product. Check out some of my work in the Projects
-                section.
-              </p>
-              <p>
-                I also like sharing content related to the stuff that I have
-                learned over the years in Web Development so it can help other
-                people of the Dev Community. Feel free to Connect or Follow me
-                on my Linkedin where I post useful content related to Web
-                Development and Programming.
+            <div className="space-y-3 text-base">
+            <p>
+                I&apos;m a frontend developer but also like to call myself a
+                visual artist. My journey has taken me from creating digital
+                visuals to designing and developing websites.
               </p>{" "}
               <p>
                 {" "}
-                I&apos;m open to Job opportunities where I can contribute, learn
-                and grow. If you have a good opportunity that matches my skills
-                and experience then don&apos;t hesitate to contact me.
+                I find joy in bringing together the worlds of creativity and
+                technology, crafting user-friendly and visually pleasing online
+                experiences. Through my journey, I&apos;ve learned to balance
+                aesthetics and functionality, creating online experiences that
+                resonate with users.
+              </p>{" "}
+              <p>
+                My background in visual art gives me a unique perspective on
+                design, allowing me to bring a creative touch to every project I
+                work on. Ultimately, my goal is to create digital experiences
+                that are not just visually pleasing, but also intuitive and
+                engaging.
               </p>
             </div>
             <div className="relative w-fit active:top-1">
