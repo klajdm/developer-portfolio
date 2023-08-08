@@ -1,11 +1,14 @@
-import Layout from "@/components/Layout/Layout";
 import Project from "@/components/Project";
 import { sanityClient } from "@/config/sanity.config";
+import Head from "next/head";
 import React from "react";
 
 export default function Projects({ projects }) {
   return (
     <>
+    <Head>
+        <title>Klajdi Murataj - Projects</title>
+      </Head>
       <Project projects={projects} />
     </>
   );

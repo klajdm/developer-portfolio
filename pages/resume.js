@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout/Layout";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { FiDownload } from "react-icons/fi";
@@ -8,6 +8,9 @@ export default function Resume() {
     "https://drive.google.com/uc?id=1gdLxiUXXoItEvjtJyoGH2F81wyAVcR8b";
   return (
     <>
+    <Head>
+        <title>Klajdi Murataj - Resume</title>
+      </Head>
       <div className="min-h-screen relative flex flex-col items-center md:justify-center ">
         <h1 className="relative custom-h1 font-[NunitoMD] text-center w-fit my-10 dark:text-white">
           Curriculum Vitae
