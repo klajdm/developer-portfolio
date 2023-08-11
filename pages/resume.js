@@ -5,7 +5,8 @@ import { FiDownload } from "react-icons/fi";
 
 export default function Resume() {
   const pdfSrc =
-    "https://drive.google.com/uc?id=1gdLxiUXXoItEvjtJyoGH2F81wyAVcR8b";
+    "https://drive.google.com/uc?id=1Qz6auGgDcTVaQV_v1mZvD5Kx7owH8ZDG";
+    
   return (
     <>
     <Head>
