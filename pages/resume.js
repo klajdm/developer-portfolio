@@ -4,12 +4,11 @@ import React from "react";
 import { FiDownload } from "react-icons/fi";
 
 export default function Resume() {
-  const pdfSrc =
-    "https://drive.google.com/uc?id=1Qz6auGgDcTVaQV_v1mZvD5Kx7owH8ZDG";
-    
+  const pdfSrc = "./klajdi_murataj_cv.pdf";
+
   return (
     <>
-    <Head>
+      <Head>
         <title>Klajdi Murataj - Resume</title>
       </Head>
       <div className="min-h-screen relative flex flex-col items-center md:justify-center ">
@@ -17,11 +16,11 @@ export default function Resume() {
           Curriculum Vitae
         </h1>
         <div className=" w-[95%] h-[564px] md:w-[85%] md:h-[1064px] lg:w-[720px] relative mb-20">
-          <div className="absolute bg-[#86906F] hover:bg-[#90a06a] dark:bg-[#a1b378] dark:hover:bg-[#90a06a] text-white w-12 h-12 rounded-full shadow-lg z-10 flex justify-center items-center right-[-1rem] top-[-1.3rem] hover:scale-105 cursor-pointer text-xl">
-            <Link href={pdfSrc} target="_blank" className="animate">
+          <Link href={pdfSrc} target="_blank" className="animate">
+            <div className="absolute bg-[#86906F] hover:bg-[#90a06a] dark:bg-[#a1b378] dark:hover:bg-[#90a06a] text-white w-12 h-12 rounded-full shadow-lg z-10 flex justify-center items-center right-[-1rem] top-[-1.3rem] hover:scale-105 cursor-pointer text-xl">
               <FiDownload />
-            </Link>
-          </div>
+            </div>
+          </Link>
           <iframe
             src={`${pdfSrc}#toolbar=0`}
             title="Resume"
@@ -40,3 +39,5 @@ export default function Resume() {
     </>
   );
 }
+
+// "https://drive.google.com/uc?id=1Qz6auGgDcTVaQV_v1mZvD5Kx7owH8ZDG"
