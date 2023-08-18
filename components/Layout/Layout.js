@@ -154,7 +154,7 @@ export default function Layout({ children }) {
       </Head>
       <ThemeProvider attribute="class">
         <Navbar />
-        <div className="backdrop-blur-[2px]">
+        <div className="backdrop-blur-[1px]">
           <main>
             <div className="relative max-h-full lg:max-w-7xl mx-5 lg:mx-auto pt-16 ">
               {children}
