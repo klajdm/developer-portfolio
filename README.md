@@ -200,14 +200,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - GitHub: [@klajdm](https://github.com/klajdm)
 - LinkedIn: [[Klajdi Murataj](https://www.linkedin.com/in/klajdi-murataj-511617285/)]
 
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) for the amazing React framework
-- [Sanity](https://sanity.io/) for the flexible CMS
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) for beautiful animations
-- [NextUI](https://nextui.org/) for modern React components
-
 ---
 
 ⭐ Don't forget to star this repository if you found it helpful!
